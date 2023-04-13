@@ -1,13 +1,40 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .container {
+        width: 768px;
+    }    
 }
 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .container {
+        width: 992px;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    .container {
+        width: 1200px;
+    }
+}
+
+/* Creat global rule  */
 body {
     font-family: 'Roboto', sans-serif;
 }
 .container {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+:root {
+    --main-color: #fff44f;
+    
+}
+
+/* custom landing section  */
+.landing {
     height: 100vh;
     width: 100vw;
     background: url(../image/bg.jpg) no-repeat;
@@ -15,30 +42,34 @@ body {
     background-position: 50% 30%;
     display: flex;
     justify-content: cneter;
-    align-items: center;
-    padding: 0 8%;
     text-align: center;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.container::before {
+.landing::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.75)
+    background-color: rgba(0, 0, 0, 0.7)
 }
+
 .content {
     max-width: 100%;
     padding: 2rem 0;
     position: relative;
     z-index: 1;
+    width: 768px;
+    max-width: 100%;
+    padding: 20px;
 }
 .content h1 {
     font-size: 4.3rem;
     margin-bottom: 0.8rem;
-    color: #fff44f;
+    color: var(--main-color);
     font-family: 'Dancing Script', cursive;
 }
 .content p {
@@ -51,16 +82,12 @@ body {
     margin-top: 0.8rem;
     font-size: 1.1rem;
     font-weight: 500;
-    color: #fff44f;
+    color: var(--main-color);
     background-color: #111;
     transition-duration: 0.3s;
     text-decoration: none;
     display: inline-block;
     border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
     text-transform: uppercase;
     
 }
